@@ -32,8 +32,9 @@
 *.app
 
 # Developer files
-/.vs/
-/packages/
-/x64/
-/classy-clash/
+/.vs
+/packages
+/x64
+/classy-clash
 packages.config
+/x64/Debug
