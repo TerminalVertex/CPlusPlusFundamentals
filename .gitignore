@@ -31,19 +31,8 @@
 *.out
 *.app
 
-# Folders
-x64/
-classy-clash/x64/
-packages/
+# Developer files
+/.vs/
+/packages/
+/x64/
 packages.config
-/classy-clash/x64
-/classy-clash/x64
-/classy-clash/x64/Debug
-/x64
-/x64/Debug
-.vs/classy-clash/v17/Browse.VC.db
-.vs/classy-clash/v17/DocumentLayout.backup.json
-.vs/classy-clash/v17/DocumentLayout.json
-.vs/classy-clash/v17/Browse.VC.db
-.vs/classy-clash/v17/.suo
-.vs/classy-clash/v17/Browse.VC.db
