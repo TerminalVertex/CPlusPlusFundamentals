@@ -35,6 +35,7 @@
 /.vs
 /packages
 /x64
-/classy-clash
-packages.config
 /x64/Debug
+/classy-clash/
+/classy-clash/x64/Debug
+packages.config
