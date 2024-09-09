@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseCharacter.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="main.cpp" />
@@ -136,6 +137,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseCharacter.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Prop.h" />
