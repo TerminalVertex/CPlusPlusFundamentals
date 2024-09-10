@@ -1,3 +1,5 @@
+#include <string>
+
 #include "raylib.h"
 #include "raymath.h"
 #include "Character.h"
@@ -8,14 +10,11 @@ int main()
 {
 	const int windowWidth{ 384 };
 	const int windowHeight{ 384 };
-	// initialize the window
 	InitWindow(windowWidth, windowHeight, "Classy Clash");
 
 	Texture2D map = LoadTexture("nature_tileset/OpenWorldMap24x24.png");
 	Vector2 mapPos{ 0.0,0.0 };
 	const float mapScale{ 4.0f };
-
-	SetTargetFPS(60);
 
 	Character knight{windowWidth, windowHeight};
 
@@ -26,12 +25,12 @@ int main()
 	};
 	goblin.setTarget(&knight);
 
-
 	Prop props[2]{
 		Prop{Vector2{600.f,300.f}, LoadTexture("nature_tileset/Rock.png")},
 		Prop{Vector2{400.f,500.f}, LoadTexture("nature_tileset/Log.png")}
 	};
 
+	SetTargetFPS(60);
 	while (!WindowShouldClose())
 	{
 		// start drawing
@@ -47,6 +46,20 @@ int main()
 		for (auto prop : props)
 		{
 			prop.Render(knight.getWorldPos());
+		}
+
+		if (!knight.getAlive()) // Character is not alive
+		{
+			DrawText("Game Over!", 55.f, 45.f, 40, RED);
+			EndDrawing();
+			continue;
+		}
+		else // Character is alive
+		{
+			std::string knightsHealth = "Health: ";
+			knightsHealth.append(std::to_string(knight.getHealth()), 0, 5);
+			DrawText(knightsHealth.c_str(), 55.f, 45.f, 40, RED);
+
 		}
 
 
