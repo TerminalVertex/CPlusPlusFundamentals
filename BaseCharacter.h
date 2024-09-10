@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 
 #ifndef BASE_CHARACTER_H
 #define BASE_CHARACTER_H
